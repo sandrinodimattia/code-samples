@@ -2,3 +2,7 @@
 .DS_Store
 node_modules
 .env
+
+# Cypress data
+cypress/videos
+cypress/screenshots

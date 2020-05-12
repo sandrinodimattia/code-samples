@@ -1,0 +1,22 @@
+{
+  "name": "cypress-auth0-spa-sample",
+  "version": "1.0.0",
+  "description": "Cypress testing for your SPAs secured with Auth0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:record": "cypress run --record",
+    "start": "node index",
+    "test": "npm run cy:run",
+    "test:ci": "npm run cy:run:record"
+  },
+  "author": "Sandrino Di Mattia",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^4.5.0",
+    "date-fns": "^2.13.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^3.0.4"
+  }
+}

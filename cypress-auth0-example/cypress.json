@@ -1,0 +1,10 @@
+{
+  "env": {
+    "DEFAULT_USER": "user@user.com",
+    "AUTH0_DOMAIN": "yourauth0account.auth0.com",
+    "APPLICATION_COOKIE_NAME": "appSession",
+    "APPLICATION_LOGIN_URL": "http://localhost:8080/login",
+    "APPLICATION_CALLBACK_URL": "http://localhost:8080/callback"
+  },
+  "experimentalGetCookiesSameSite": true
+}

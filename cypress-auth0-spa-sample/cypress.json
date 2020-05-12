@@ -1,0 +1,10 @@
+{
+  "port": 8080,
+  "env": {
+    "SHOWS_API": "https://some-api/api/my/shows",
+    "DEFAULT_USER": "user@user.com",
+    "AUTH0_DOMAIN": "yourauth0account.auth0.com",
+    "APPLICATION_CALLBACK_URL": "http://localhost:8080/"
+  },
+  "experimentalGetCookiesSameSite": true
+}
