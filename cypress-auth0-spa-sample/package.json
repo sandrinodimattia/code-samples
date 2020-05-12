@@ -7,7 +7,6 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:run:record": "cypress run --record",
-    "start": "node index",
     "test": "npm run cy:run",
     "test:ci": "npm run cy:run:record"
   },
