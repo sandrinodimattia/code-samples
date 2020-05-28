@@ -52,7 +52,6 @@ export default function useApi(baseUrl) {
         if (options.auth) {
           token = await auth0.getTokenSilently();
         }
-        console.log(token);
         // Execute the request.
         run((init) => {
           const headers = init.headers;
@@ -68,7 +67,6 @@ export default function useApi(baseUrl) {
           };
         });
       } catch (e) {
-        console.log(e);
         setError(e);
       } finally {
         setLoading(false);

@@ -10,11 +10,6 @@ export default () => {
     process.env.API_GATEWAY_BASE_URL
   );
 
-  console.log({
-    data,
-    error,
-    isPending
-  });
   const getColors = () => get('/colors', { auth: authEnabled });
   const getMyProfile = () => get('/my/profile', { auth: authEnabled });
   const getMyColors = () => get('/my/colors', { auth: authEnabled });
