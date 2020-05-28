@@ -6,3 +6,6 @@ node_modules
 # Cypress data
 cypress/videos
 cypress/screenshots
+
+# Serverless
+.serverless

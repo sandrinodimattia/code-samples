@@ -1,0 +1,54 @@
+org: sandrinodm
+app: http-api-jwt-example
+service: http-api-jwt-example
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  httpApi:
+    cors:
+      allowedHeaders:
+        - Content-Type
+        - Authorization
+      allowedMethods:
+        - OPTIONS
+        - GET
+      allowedOrigins:
+        - http://localhost:3000
+        - https://aws-api-gateway-jwt-auth0.now.sh
+    payload: '2.0'
+    authorizers:
+      accessTokenAuth0:
+        identitySource: $request.header.Authorization
+        issuerUrl: https://auth.sandrino.dev/
+        audience:
+          - urn:colors-api
+
+functions:
+  # List all colors (public endpoint)
+  getColors:
+    handler: handler.colors
+    events:
+      - httpApi:
+          method: GET
+          path: /colors
+  # List my colors (requires authentication and the read:colors scope)
+  myColors:
+    handler: handler.myColors
+    events:
+      - httpApi:
+          method: GET
+          path: /my/colors
+          authorizer:
+            name: accessTokenAuth0
+            scopes:
+              - read:colors
+  # List my profile (requires authorization)
+  myProfile:
+    handler: handler.myProfile
+    events:
+      - httpApi:
+          method: GET
+          path: /my/profile
+          authorizer:
+            name: accessTokenAuth0
