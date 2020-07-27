@@ -1,0 +1,9 @@
+<div class="pt-5">
+  <div class="container mx-auto">
+    <h2 class="text-xl mb-3">Protected</h2>
+    <p>This is a protected page. When running on Azure Websites, it will require the user to be authenticated.</p>
+    <p class="mb-3 text-xs text-gray-600">The list below shows all headers provided by Azure Websites.</p>
+    <pre
+      class="mb-3 text-gray-800 text-sm border-solid border border-gray-400 bg-gray-200 p-3 overflow-x-scroll"><code><%- JSON.stringify(headers, null, 2) %></code></pre>
+  </div>
+</div>
